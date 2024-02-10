@@ -10,3 +10,12 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body {
+    background-color: #f5f5f5; /* Color pastel */
+  }
+  
+  .form-control::placeholder {
+    color: #666;
+    font-family: inherit;
+  }
+  
