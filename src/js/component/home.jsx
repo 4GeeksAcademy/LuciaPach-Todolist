@@ -29,7 +29,7 @@ function ListWithInput() {
             type="text"
             className="form-control mb-0 rounded-0"
             style={{ backgroundColor: '#fff', boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)', fontWeight: '300', marginBottom: '0', outline: 'none', border: '1px solid rgba(255, 182, 193, 0.3)', fontSize: 'calc(16px + 3px)', color: '#666', fontFamily: 'inherit' }}
-            placeholder="Add new item..."
+            placeholder="What needs to be done?"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={handleKeyDown}
