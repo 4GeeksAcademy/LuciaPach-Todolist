@@ -24,7 +24,7 @@ function ListWithInput() {
     <div className="container-fluid" style={{ color: '#666', fontFamily: 'inherit' }}>
       <div className="row justify-content-center mt-5">
         <div className="col-md-6">
-          <h1 className="text-center mb-4" style={{ color: 'rgba(255, 182, 193, 0.9)', fontWeight: '300' }}>TODOS</h1>
+          <h1 className="text-center mb-0" style={{ color: 'rgba(255, 182, 193, 0.9)', fontWeight: '300', marginBottom: '0' }}>TODOS</h1>
           <input
             type="text"
             className="form-control mb-0 rounded-0"
@@ -34,13 +34,7 @@ function ListWithInput() {
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={handleKeyDown}
           />
-          <div style={{ marginTop: '0', display: 'flex', flexDirection: 'column-reverse', gap: '0' }}>
-            <div
-              className="list-item"
-              style={{ position: 'relative', marginBottom: '0', backgroundColor: '#fff', boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)', padding: '5px 10px', border: '1px solid rgba(255, 182, 193, 0.3)', fontSize: 'calc(16px + 3px)', fontFamily: 'inherit', fontWeight: '300', fontSize: '14px', borderRadius: '5px' }} // Ajuste de fontSize y borderRadius
-            >
-              {remainingItemCount} {remainingItemCount === 1 ? 'item' : 'items'} left
-            </div>
+          <div className="items-container">
             {items.slice(0).reverse().map((item, index) => (
               <div
                 key={index}
@@ -59,6 +53,16 @@ function ListWithInput() {
                 </button>
               </div>
             ))}
+          </div>
+          <div
+            className="list-item"
+            style={{ position: 'relative', marginBottom: '0', marginTop: '0px', backgroundColor: '#fff', boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)', padding: '5px 10px', border: '1px solid rgba(255, 182, 193, 0.3)', fontSize: 'calc(16px + 3px)', fontFamily: 'inherit', fontWeight: '300', fontSize: '14px'}}
+          >
+            {remainingItemCount} {remainingItemCount === 1 ? 'item' : 'items'} left
+          </div>
+          <div className="width-divs">
+            <div className="width-99" style={{boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)', border: '1px solid rgba(255, 182, 193, 0.3)'}}></div>
+            <div className="width-98" style={{ boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)', border: '1px solid rgba(255, 182, 193, 0.3)'}}></div>
           </div>
         </div>
       </div>
